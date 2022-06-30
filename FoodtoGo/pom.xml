@@ -8,13 +8,13 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.revature</groupId>
 	<artifactId>FoodtoGo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>FoodtoGo</name>
 	<description>Food to Go project</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>11</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
