@@ -1,23 +1,23 @@
 package com.example.FoodtoGo.entity;
 
 import lombok.*;
-
+import com.example.FoodtoGo.entity.*;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Setter
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 @Data
+@Entity
 @Table(name="notifications")
 public class Notifications {
 
     @Id
     @GeneratedValue
-    private int notificationId;
+    private int id;
     private String message;
 
     // Below needs changes to specify notifications

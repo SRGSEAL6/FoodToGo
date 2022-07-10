@@ -1,25 +1,28 @@
 package com.example.FoodtoGo.entity;
 
 import lombok.*;
-
+import com.example.FoodtoGo.entity.*;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Setter
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 @Data
+@Entity
 @Table(name="restaurants")
-public class Restaurant {
+public class Restaurant implements Serializable {
 
     @Id
     @GeneratedValue
-    private int restaurantId;
+    private int id;
     private String restName;
     private String restAddress;
+    private String username;
+    private String password;
     private String menu;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -30,7 +33,7 @@ public class Restaurant {
     )
     private List<Food> foods = new ArrayList<>();
 
-    @OneToOne(mappedBy = "restaurants", targetEntity = Order.class)
-    private Order order;
+/*    @OneToOne(mappedBy = "restaurants", fetch = FetchType.LAZY)
+    private Order orders;*/
 
 }
