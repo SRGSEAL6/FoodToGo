@@ -1,21 +1,21 @@
 package com.example.FoodtoGo.entity;
 
 import lombok.*;
-
+import com.example.FoodtoGo.entity.*;
 import javax.persistence.*;
 
-@Entity
-@Setter
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 @Data
-@Table(name="users")
+@Entity
+@Table(name="consumers")
 public class Consumer {
 
     @Id
     @GeneratedValue
-    private int consumerId;
+    private int id;
     private String consumerFullName;
     private String consumerAddress;
     @Enumerated(EnumType.STRING)
@@ -23,7 +23,7 @@ public class Consumer {
     private String username;
     private String password;
 
-    @OneToOne(mappedBy = "consumers", targetEntity = Order.class)
-    private Order order;
+/*    @OneToOne(mappedBy = "consumers"*//*, fetch = FetchType.LAZY,targetEntity = Order.class*//*)
+    private Order order;*/
 
 }
