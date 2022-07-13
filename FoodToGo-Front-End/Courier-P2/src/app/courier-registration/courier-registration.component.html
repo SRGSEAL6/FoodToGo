@@ -1,0 +1,70 @@
+<!--- Introduction Page ---->
+
+<!--- Courier Registration Form ----------->
+<div class="container m-5">
+    <div class="card-header text-white rounded" style="background:#ca7b31;">
+        <h1 class="shadow-lg text-center p-3">Sign up to become a EatHub Courier</h1>
+    </div>
+    <form class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
+        <h3 class="card-title fw-bold pt-3 text-decoration-underline">Personal Information</h3>
+        <div class="row">
+<!--- Validate ---->
+            <div class="col p-3">
+                <label for="courierFullName" class="form-label fs-5 fw-semibold">Full Legal Name</label>
+                <input id ="courierFullName" class="form-control shadow-lg">
+            </div>
+<!--- Validate age is over 18 yrs ---->
+            <div class="col p-3">
+                <label class="form-label fs-5 fw-semibold" for="courierInfoVerify">Date of Birth</label>
+                <input class="form-control shadow-lg"id="courierInfoVerify">
+            </div>
+        </div>
+
+        <h3 class="card-title pt-3 fw-bold text-decoration-underline">Vehicle Information</h3>
+        <div class="row">
+<!--- Validate ---->
+            <div class="col p-3">
+                <label for="courierDriverLicense" class="form-label fs-5 fw-semibold">Driver's License #</label>
+                <input id="courierDriverLicense" class="form-control shadow-lg">
+            </div>
+<!--- Validate ---->
+            <div class="col p-3">
+                <label for="courierVehicle" class="form-label fs-5 fw-semibold">Vehicle Make and Model</label>
+                <input id="courierVehicle" class="form-control shadow-lg">
+            </div>
+<!--- Validate ---->
+            <div class="col p-3">
+                <label for="courierVehicleLicense" class="form-label fs-5 fw-semibold">License Plate # Associated with Vehicle</label>
+                <input id="courierVehicleLicense" class="form-control shadow-lg" placeholder="For Example: EAT-382">
+            </div>
+        </div>
+
+        <h3 class="card-title fw-bold pt-3 text-decoration-underline">Login Information</h3>
+        <div class="row">
+<!--- Validate ---->
+            <div class="col p-3">
+                <label for="courierEmail" class="form-label fs-5 fw-semibold">Email</label>
+                <input id="courierEmail" type="email" class="form-control shadow-lg">
+            </div>
+<!--- Validate ---->
+            <div class="col p-3">
+                <label for="courierPassword" class="form-label fs-5 fw-semibold">Password</label>
+                <input id="courierPassword" type="password" class="form-control shadow-lg">
+            </div>
+        </div>
+        <hr />
+<!--- Configure checkbox to be validated/required ---->        
+        <div class="row">
+            <div class="col mt-3 text-start">
+                <input class="form-check-input" type="checkbox" id="courierBackgroundCheck">
+                <label class="form-check-label text-danger" style="font-size:20px" for="courierBackgroundCheck">
+                    * <span class="text-white">I consent to a background check before I can start my career with EatHub.</span>
+                </label>
+                </div>
+        </div>
+<!--- Configure the button to submit the registration form and bring courier to main page --->
+        <div class="text-end p-2">
+            <button type="submit" class="btn btn-light fw-bolder px-5 rounded-pill">Submit</button>
+        </div>  
+    </form>
+</div>
