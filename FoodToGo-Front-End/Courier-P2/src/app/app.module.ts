@@ -23,6 +23,9 @@ import { RegistrationVehicleInfoComponent } from './courier-registration/courier
 import { RegistrationLoginInfoComponent } from './courier-registration/courier-registration-form/registration-login-info/registration-login-info.component';
 import { CourierRegistrationFormComponent } from './courier-registration/courier-registration-form/courier-registration-form.component';
 import { CourierLoginComponent } from './courier-login/courier-login.component';
+import { CourierProfilePersonalInfoComponent } from './Courier-Main-Page/courier-profile/courier-profile-personal-info/courier-profile-personal-info.component';
+import { CourierProfileVehicleInfoComponent } from './Courier-Main-Page/courier-profile/courier-profile-vehicle-info/courier-profile-vehicle-info.component';
+import { CourierProfileLoginInfoComponent } from './Courier-Main-Page/courier-profile/courier-profile-login-info/courier-profile-login-info.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,9 @@ import { CourierLoginComponent } from './courier-login/courier-login.component';
     RegistrationLoginInfoComponent,
     CourierRegistrationFormComponent,
     CourierLoginComponent,
+    CourierProfilePersonalInfoComponent,
+    CourierProfileVehicleInfoComponent,
+    CourierProfileLoginInfoComponent,
   ],
   imports: [
     BrowserModule
