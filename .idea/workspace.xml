@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e27dccd8-f26c-43c6-8de0-8f8ab0e0a6e5" name="Changes" comment="Made the">
-      <change afterPath="$PROJECT_DIR$/FoodtoGo/db-schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/repository/RestaurantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/dto/ConsumerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/dto/HttpError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/dto/RestuarantDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/ConsumerRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Courier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Notifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Notifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/repository/ConsumerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/repository/ConsumerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/repository/CourierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/repository/CourierRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +20,32 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2AzxR1CRrqwg0Jq2lR1QmO509dZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,14 +55,12 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Dylan/FoodToGo"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Javier\revature.home.project2\FoodtoGo\src\main\java\com\example\FoodtoGo\web\" />
@@ -109,6 +115,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

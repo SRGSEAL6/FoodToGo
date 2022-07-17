@@ -15,9 +15,9 @@ public class Courier {
 
     @Id
     @GeneratedValue
-    private int id;
-    private String username;
-    private String password;
+    private int courierId;
+    private String courierUsername;
+    private String courierPassword;
     private String courierName;
     private Boolean hasOrder;
 
