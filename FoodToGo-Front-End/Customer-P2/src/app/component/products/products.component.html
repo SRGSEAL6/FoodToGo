@@ -1,0 +1,83 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-village-house-logo-real-estate-logo-vector-cottage-farm-logotype-png-image_3628984.jpg" alt="">
+                <h6>Restaurant 1</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <img src="https://png.pngtree.com/png-clipart/20190515/original/pngtree-food-logo-vector-design.-restaurant-and-cafe-logo.-png-image_3628402.jpg" alt="">
+                <h6>Restaurant 2</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+                <img src="https://png.pngtree.com/png-clipart/20211026/original/pngtree-simple-coffee-elemental-design-free-logo-design-template-png-image_3597680.png" alt="">
+                <h6>Restaurant 3</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-cookies-logo-cake-logo-sweet-logo-png-image_4823060.jpg" alt="">
+                <h6>Restaurant 4</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20210801/original/pngtree-tree-logo-png-png-image_6595324.jpg" alt="">
+                <h6>Restaurant 4</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20201208/original/pngtree-cool-funny-chicken-mascot-design-suitable-for-restaurant-logo-or-packaging-png-image_5562210.jpg" alt="">
+                <h6>Restaurant 4</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://png.pngtree.com/png-clipart/20220616/original/pngtree-orange-lemon-juice-drink-for-summer-holiday-sticker-in-beach-illustration-png-image_8081583.png" alt="">
+                <h6>Drinks</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <img src="https://png.pngtree.com/png-clipart/20210308/original/pngtree-original-font-burger-fast-food-bag-kraft-paper-bag-png-image_5769038.jpg" alt="">
+                <h6>Sides</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+                <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-pitaya-salad-png-image_5892283.png" alt="">
+                <h6>Veggie Cravings</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-burger-vector-illustration-with-filled-line-design-burger-clip-art-png-image_5225334.jpg" alt="">
+                <h6>Burgers</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> ${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
