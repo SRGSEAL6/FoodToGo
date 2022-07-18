@@ -62,7 +62,7 @@ public class OrderRestController {
 
     }
     @GetMapping(
-            value = "/food",
+            value = "/order",
             produces = {
                     "application/json"
             }
@@ -74,7 +74,7 @@ public class OrderRestController {
         return ResponseEntity.ok(orderList);
     }
     @GetMapping(
-            value = "/food",
+            value = "/order",
             produces = {
                     "application/json"
             },
@@ -92,7 +92,7 @@ public class OrderRestController {
         return ResponseEntity.ok(orderList);
     }
     @GetMapping(
-            value = "/food",
+            value = "/order",
             produces = {
                     "application/json"
             },
@@ -110,7 +110,7 @@ public class OrderRestController {
         return ResponseEntity.ok(orderList);
     }
     @GetMapping(
-            value = "/food",
+            value = "/order",
             produces = {
                     "application/json"
             },
