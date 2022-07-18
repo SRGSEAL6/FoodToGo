@@ -8,7 +8,6 @@ import com.example.FoodtoGo.repository.RestaurantRepository;
 import com.example.FoodtoGo.web.dto.ConsumerDto;
 import com.example.FoodtoGo.web.dto.HttpError;
 import com.example.FoodtoGo.web.dto.RestuarantDto;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -125,3 +124,4 @@ public class ConsumerRestController {
 
 
 }
+

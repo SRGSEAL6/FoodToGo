@@ -54,7 +54,7 @@ public class CourierRestController {
             HttpError httpError = new HttpError("Username cannot be empty");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(httpError);
         }
-        Courier courier = courierRepository.findByUsername(username);
+        Courier courier = courierRepository.findByCourierUsername(username);
         if (courier == null) {
             HttpError httpError = new HttpError("Username cannot be found");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(httpError);

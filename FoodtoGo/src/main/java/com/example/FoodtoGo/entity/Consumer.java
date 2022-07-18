@@ -22,8 +22,10 @@ public class Consumer {
     private PaymentType paymentType;
     private String username;
     private String password;
+    @Enumerated(EnumType.STRING)
+    private AccountType accountType;
 
-/*    @OneToOne(mappedBy = "consumers"*//*, fetch = FetchType.LAZY,targetEntity = Order.class*//*)
-    private Order order;*/
+    @OneToOne(mappedBy = "consumer", fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true)
+    private Order order;
 
 }

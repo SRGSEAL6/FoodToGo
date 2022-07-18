@@ -20,8 +20,10 @@ public class Courier {
     private String courierPassword;
     private String courierName;
     private Boolean hasOrder;
+    @Enumerated(EnumType.STRING)
+    private AccountType accountType;
 
-/*    @OneToOne(mappedBy = "couriers",fetch = FetchType.LAZY,targetEntity = Order.class)
-    private Order order;*/
+    @OneToOne(mappedBy = "courier", fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true)
+    private Order order;
 
 }
