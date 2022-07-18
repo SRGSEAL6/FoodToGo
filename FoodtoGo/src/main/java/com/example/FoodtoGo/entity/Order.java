@@ -1,7 +1,6 @@
 package com.example.FoodtoGo.entity;
 
 import lombok.*;
-import com.example.FoodtoGo.entity.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -23,26 +22,26 @@ public class Order implements Serializable {
     private Timestamp creationTime;
     private double totalAmount;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinTable(
+    @OneToMany(fetch = FetchType.LAZY)
+/*    @JoinTable(
             name = "orders_foods",
             joinColumns = @JoinColumn(name = "orders_id"),
             inverseJoinColumns = @JoinColumn(name = "foods_id")
-    )
+    )*/
     private List<Food> foods = new ArrayList<>();
 
     //Consumer can have one order, but order has many entitys ?
-/*    @OneToOne
+    @OneToOne
     @JoinColumn(name = "consumer_id")
-    private Consumer consumer;*/
+    private Consumer consumer;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurants_id")
-    private Restaurant restaurants;
+    private Restaurant restaurant;
 
-/*    @OneToOne
+    @OneToOne
     @JoinColumn(name = "courier_id")
-    private Courier courier;*/
+    private Courier courier;
 
 
 }

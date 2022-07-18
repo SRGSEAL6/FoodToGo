@@ -23,17 +23,22 @@ public class Restaurant implements Serializable {
     private String restAddress;
     private String username;
     private String password;
-    private String menu;
+    @Enumerated(EnumType.STRING)
+    private RestaurantType restaurantType;
+    @Enumerated(EnumType.STRING)
+    private AccountType accountType;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
+    //private String menu;
+
+    @OneToMany(fetch = FetchType.LAZY)
+/*    @JoinTable(
             name = "restaurants_foods",
             joinColumns = @JoinColumn(name = "restaurants_id"),
             inverseJoinColumns = @JoinColumn(name = "foods_id")
-    )
+    )*/
     private List<Food> foods = new ArrayList<>();
 
-/*    @OneToOne(mappedBy = "restaurants", fetch = FetchType.LAZY)
-    private Order orders;*/
+    @OneToOne(mappedBy = "restaurant", fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true)
+    private Order order;
 
 }
