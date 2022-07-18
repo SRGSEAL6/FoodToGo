@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CourierMainService } from './courier-main.service';
 
 @Component({
   selector: 'app-courier-main',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourierMainComponent implements OnInit {
 
-  constructor() { }
+  main: string = ""
+
+  constructor(
+    private mainService: CourierMainService,
+  ) { }
 
   ngOnInit(): void {
+    this.mainService.getCourierMain()
+      .subscribe({
+        next:(m:any)=>{
+          this.main = m;
+        }
+      })
   }
 
 }

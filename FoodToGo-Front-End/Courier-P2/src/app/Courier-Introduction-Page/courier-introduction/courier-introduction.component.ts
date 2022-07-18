@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CourierIntroductionService } from './courier-introduction.service';
 
 @Component({
   selector: 'app-courier-introduction',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourierIntroductionComponent implements OnInit {
 
-  constructor() { }
+  introduction: string = ""
+
+  constructor(
+    private introService: CourierIntroductionService
+  ) { }
 
   ngOnInit(): void {
+    this.introService.getCourierIntroduction()
+      .subscribe({
+        next:(i:any)=>{
+          this.introduction = i;
+        }
+      })
   }
 
 }

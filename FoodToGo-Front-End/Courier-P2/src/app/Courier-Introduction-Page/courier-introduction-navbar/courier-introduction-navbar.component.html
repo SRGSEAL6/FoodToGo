@@ -1,0 +1,33 @@
+<!--- Courier Introduction Navbar --->
+
+<nav class="navbar navbar-expand-lg p-3" style="background:#E2A165;">
+    <div class="container-fluid">   
+        <a class="navbar-brand text-white m-2" style="font-size:70px; font-weight:700;">Eat<span class="text-dark">Hub</span></a>
+        <button class="navbar-toggler p-2 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon p-4"></span>
+        </button>
+    <!--- Add Log or image ---->
+        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+            <ul class="navbar-nav ms-auto h4" style="font-size:30;">
+                <!-- link to restaurant page -->
+                    <li class="nav-item">
+                        <button type="button" class="nav-link px-4 text-light btn btn-lg rounded-pill position-relative">Restaurants</button>
+                    </li>
+                <!--- Link to courier introduction page ----->                    
+                    <li class="nav-item">
+                        <button type="button" [routerLink]="['courierOpportunities']"  class="nav-link px-4 text-light btn btn-lg rounded-pill position-relative">Opportunities</button>
+                    </li>
+                <!--- Link to customer sign up page ----->
+                    <li class="nav-item">
+                        <button type="button" [routerLink]="['courierSignUp']" class="nav-link btn btn-light px-4 rounded-pill text-dark">Sign Up</button>
+                    </li>
+                <!--- Link to overall login page ----->
+                    <li class="nav-item mx-4">
+                        <button type="button" [routerLink]="['courierLogin']" class="nav-link btn btn-dark px-4 rounded-pill text-light">Login</button>
+                    </li>
+            </ul>             
+        </div> 
+    </div>
+</nav>
+
+<router-outlet></router-outlet>                  

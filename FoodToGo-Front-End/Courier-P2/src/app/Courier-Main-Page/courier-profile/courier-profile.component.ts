@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CourierProfile } from './mock-courier';
+import { COURIERS } from './mock-courier-profile';
+import {CourierProfileService} from './courier-profile.service'
 
 @Component({
   selector: 'app-courier-profile',
@@ -7,9 +12,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourierProfileComponent implements OnInit {
 
-  constructor() { }
+  @Input("value")
+  courier = COURIERS;
+
+  @Output() update = new EventEmitter();
+
+  courierRegistrationUpdate! = FormGroup
+
+  constructor(
+    private router: Router,
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.courierRegistrationUpdate = this.fb.group({
+      courierName: [''],
+      DOB: [ ],
+      driversLicenseNum: [''],
+      makeAndModel: [''],
+      licensePlateNum: [''],
+      email: [''],
+      courierPassword: [''],
+    })
   }
+
+  
 
 }
