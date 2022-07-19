@@ -1,0 +1,242 @@
+[
+    {
+      "id": 1,
+      "title": "Taco Bell - Classic Combo",
+      "price": 4.99,
+      "description": "Classic taco bell combo featuring the cheesy gordita. 830-1250 Calories",
+      "category": "tacos",
+      "image": "https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?cs=srgb&dl=pexels-chitokan-2092507.jpg&fm=jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "Checkers - Checkerburger",
+      "price": 12.34,
+      "description": "An american classic for over 40 years, this burger includes...",
+      "category": "burger",
+      "image": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?cs=srgb&dl=pexels-rajesh-tp-1633578.jpg&fm=jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    },
+    {
+      "id": 3,
+      "title": "Olive Garden - Lasagna",
+      "price": 14.99,
+      "description": "Enjoy a feast for your senses with the olive garden...",
+      "category": "italian",
+      "image": "https://s3-media1.fl.yelpcdn.com/bphoto/4N_ptorY1K_LhExwDlhX8g/o.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
+    },
+    {
+      "id": 4,
+      "title": "Enrigo Bistro - Alfredo",
+      "price": 15.99,
+      "description": "The color could be slightly different between on the screen and in practice.",
+      "category": "italian",
+      "image": "https://images.pexels.com/photos/11220208/pexels-photo-11220208.jpeg?cs=srgb&dl=pexels-engin-akyurt-11220208.jpg&fm=jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
+    },
+    {
+      "id": 5,
+      "title": "Papa John's - Designer Pizza",
+      "price": 23.99,
+      "description": "From our Legends Collection...",
+      "category": "pizza",
+      "image": "https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?cs=srgb&dl=pexels-daria-shevtsova-1260968.jpg&fm=jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    },
+    {
+      "id": 6,
+      "title": "Ben & Jerry's - Chocolate Cake",
+      "price": 18.99,
+      "description": "Satisfaction Guaranteed.",
+      "category": "dessert",
+      "image": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?cs=srgb&dl=pexels-abhinav-goswami-291528.jpg&fm=jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
+    },
+    {
+      "id": 7,
+      "title": "McDonald's - French Fries(M)",
+      "price": 2.99,
+      "description": "World famous crispy french fries",
+      "category": "side",
+      "image": "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?cs=srgb&dl=pexels-dzenina-lukac-1583884.jpg&fm=jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      }
+    },
+    {
+      "id": 8,
+      "title": "Coca Cola (24 fl oz)",
+      "price": 2.99,
+      "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+      "category": "drink",
+      "image": "https://images.pexels.com/photos/4389667/pexels-photo-4389667.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4389667.jpg&fm=jpg",
+      "rating": {
+        "rate": 1.9,
+        "count": 100
+      }
+    },
+    {
+      "id": 9,
+      "title": "PF Chang's - Cripsy Chicken Tortilla",
+      "price": 16.90,
+      "description": "Chicken, like no one else. Enjoy our latest breakthrough...",
+      "category": "dinner",
+      "image": "https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?cs=srgb&dl=pexels-malidate-van-769289.jpg&fm=jpg",
+      "rating": {
+        "rate": 3.3,
+        "count": 203
+      }
+    },
+    {
+      "id": 10,
+      "title": "McDonald's - Chicken Salad",
+      "price": 9.99,
+      "description": "The pounds practically fall off.",
+      "category": "healthy",
+      "image": "https://images.pexels.com/photos/4198024/pexels-photo-4198024.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4198024.jpg&fm=jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      }
+    },
+    {
+      "id": 11,
+      "title": "Taco Bell - Orange Ranger Soup",
+      "price": 2.90,
+      "description": "As good as it looks.",
+      "category": "soup",
+      "image": "https://images.pexels.com/photos/691159/pexels-photo-691159.jpeg?cs=srgb&dl=pexels-delphine-hourlay-691159.jpg&fm=jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 319
+      }
+    },
+    {
+      "id": 12,
+      "title": "CheeseCake Factory - EggDrop Soup",
+      "price": 3.99,
+      "description": "Enjoy the cultural appropriation.",
+      "category": "soup",
+      "image": "https://images.pexels.com/photos/2133989/pexels-photo-2133989.jpeg?cs=srgb&dl=pexels-quang-nguyen-vinh-2133989.jpg&fm=jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 400
+      }
+    },
+    {
+      "id": 13,
+      "title": "Scardello - Super Slayer Chicken Sandwich",
+      "price": 15.89,
+      "description": "3 different species of animals had to die so you could have this. Yes, it was worth it.",
+      "category": "sandwich",
+      "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?cs=srgb&dl=pexels-erin-wang-1647163.jpg&fm=jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 250
+      }
+    },
+    {
+      "id": 14,
+      "title": "Taco Bell - Fajita Wrap",
+      "price": 5.99,
+      "description": "Replacement trousers not included.",
+      "category": "breakfeast",
+      "image": "https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?cs=srgb&dl=pexels-nishant-aneja-2955819.jpg&fm=jpg",
+      "rating": {
+        "rate": 2.2,
+        "count": 140
+      }
+    },
+    {
+      "id": 15,
+      "title": "Quiznos - Meatball Sandwich",
+      "price": 56.99,
+      "description": "Note: Currently Outlawed in 49 states.",
+      "category": "sandwich",
+      "image": "https://images.pexels.com/photos/1633559/pexels-photo-1633559.jpeg?cs=srgb&dl=pexels-rajesh-tp-1633559.jpg&fm=jpg",
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
+    },
+    {
+      "id": 16,
+      "title": "iHop - Strawberry pancakes",
+      "price": 29.95,
+      "description": "No gaslighting this time.",
+      "category": "breakfeast",
+      "image": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 340
+      }
+    },
+    {
+      "id": 17,
+      "title": "Starbucks - Grande Mucho Fabuloso",
+      "price": 12.99,
+      "description": "Look as cool as you feel with this pretentious drink.",
+      "category": "breakfeast",
+      "image": "https://images.pexels.com/photos/414555/pexels-photo-414555.jpeg?cs=srgb&dl=pexels-pixabay-414555.jpg&fm=jpg",
+      "rating": {
+        "rate": 3.8,
+        "count": 679
+      }
+    },
+    {
+      "id": 18,
+      "title": "McDonald's - Sausage Slider",
+      "price": 9.85,
+      "description": "Delicious and cheap, what more do you want?",
+      "category": "breakfeast",
+      "image": "https://images.pexels.com/photos/139746/pexels-photo-139746.jpeg?cs=srgb&dl=pexels-angele-j-139746.jpg&fm=jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 130
+      }
+    },
+    {
+      "id": 19,
+      "title": "PF Chang's - Meat Soup",
+      "price": 7.95,
+      "description": "Meatiest soup you'll ever find. Guaranteed!",
+      "category": "indian",
+      "image": "https://images.pexels.com/photos/2679501/pexels-photo-2679501.jpeg?cs=srgb&dl=pexels-shantanu-pal-2679501.jpg&fm=jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      }
+    },
+    {
+      "id": 20,
+      "title": "Taco Bell - Chicken Power Bowl",
+      "price": 17.99,
+      "description": "Chicken, refried beans, and a heaping helping of tomatoes, lettuce and carcinogens. What could go wrong?",
+      "category": "dinner",
+      "image": "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?cs=srgb&dl=pexels-dana-tentis-262959.jpg&fm=jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    }
+  ]

@@ -1,39 +1,64 @@
 <div class="card-top container-fluid">
     <div class="container d-flex">
         <div class="item">
-            <a (click)="filter('')">
-                <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-village-house-logo-real-estate-logo-vector-cottage-farm-logotype-png-image_3628984.jpg" alt="">
-                <h6>Restaurant 1</h6>
+            <a (click)="reset()">
+                <h6></h6>
+                <img src="http://cdn.onlinewebfonts.com/svg/img_212791.png" alt="">
+                <h6>Remove Filters</h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('electronics')">
-                <img src="https://png.pngtree.com/png-clipart/20190515/original/pngtree-food-logo-vector-design.-restaurant-and-cafe-logo.-png-image_3628402.jpg" alt="">
-                <h6>Restaurant 2</h6>
+            <a (click)="search('taco bell')">
+                <img src="https://images.squarespace-cdn.com/content/52a1e3e4e4b055489471b02a/1457532591740-UIVP40XNRAX3T1LMVP1I/taco-bell-logo-png-taco-bell-logo-png-taco-bell-logo.png?content-type=image%2Fpng" alt="">
+                <h6></h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('fashion')">
-                <img src="https://png.pngtree.com/png-clipart/20211026/original/pngtree-simple-coffee-elemental-design-free-logo-design-template-png-image_3597680.png" alt="">
-                <h6>Restaurant 3</h6>
+            <a (click)="search('papa')">
+                <h6>    </h6>
+                <img src="https://www.papajohnscolumbus.com/wp-content/uploads/2017/06/PJCC-Round-Logo-2017-small.png" alt="">
+                <h6></h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('jewelery')">
-                <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-cookies-logo-cake-logo-sweet-logo-png-image_4823060.jpg" alt="">
-                <h6>Restaurant 4</h6>
+            <a (click)="search('quiznos')">
+                <h6>    </h6>
+                <img style="width: 62px; margin-top: 15px;" src="https://www.pnguniverse.com/wp-content/uploads/2021/03/Quiznos-1280x869.png" alt="">
+                <h6></h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('jewelery')">
-                <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20210801/original/pngtree-tree-logo-png-png-image_6595324.jpg" alt="">
-                <h6>Restaurant 4</h6>
+            <a (click)="search('ben')">
+                <img style="width: 62px; margin-top: 5px;" src="https://cdn.freebiesupply.com/logos/large/2x/ben-jerrys-2-logo-png-transparent.png" alt="">
+                <h6></h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('jewelery')">
-                <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20201208/original/pngtree-cool-funny-chicken-mascot-design-suitable-for-restaurant-logo-or-packaging-png-image_5562210.jpg" alt="">
-                <h6>Restaurant 4</h6>
+            <a (click)="search('checkers')">
+                <h6>    </h6>
+                <img style="width: 62px; margin-top: 5px;" src="https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.rackcdn.com/tenantlogos/18212.png" alt="">
+                <h6></h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('olive')">
+                <h6>    </h6>
+                <img style="width: 62px; margin-top: 10px;" src="https://cdn.abclocal.go.com/content/wpvi/images/cms/306462_1280x720.jpg" alt="">
+                <h6></h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('mcd')">
+                <h6>    </h6>
+                <img style="width: 62px; margin-top: 10px;" src="https://purepng.com/public/uploads/large/purepng.com-mcdonalds-logologobrand-logoiconslogos-25151994043391qrj.png" alt="">
+                <h6></h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="search('ihop')">
+                <h6>    </h6>
+                <img style="width: 62px; margin-top: 15px;" src="https://logonoid.com/images/ihop-logo.png" alt="">
+                <h6></h6>
             </a>
         </div>
     </div>
@@ -41,25 +66,25 @@
 <div class="card-top container-fluid">
     <div class="container d-flex">
         <div class="item">
-            <a (click)="filter('')">
+            <a (click)="filter('drink')">
                 <img src="https://png.pngtree.com/png-clipart/20220616/original/pngtree-orange-lemon-juice-drink-for-summer-holiday-sticker-in-beach-illustration-png-image_8081583.png" alt="">
                 <h6>Drinks</h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('electronics')">
+            <a (click)="filter('side')">
                 <img src="https://png.pngtree.com/png-clipart/20210308/original/pngtree-original-font-burger-fast-food-bag-kraft-paper-bag-png-image_5769038.jpg" alt="">
                 <h6>Sides</h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('fashion')">
+            <a (click)="filter('healthy')">
                 <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-pitaya-salad-png-image_5892283.png" alt="">
                 <h6>Veggie Cravings</h6>
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('jewelery')">
+            <a (click)="filter('burger')">
                 <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-burger-vector-illustration-with-filled-line-design-burger-clip-art-png-image_5225334.jpg" alt="">
                 <h6>Burgers</h6>
             </a>
