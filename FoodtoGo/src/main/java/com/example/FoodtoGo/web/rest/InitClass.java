@@ -66,8 +66,6 @@ public class InitClass {
     }
     public static void couriermaker(CourierRepository courierRepository){
 
-        Courier courier = new Courier(1,"courier", "123", "Courier Name", false, AccountType.COURIER, null);
-        courierRepository.save(courier);
     }
 
 

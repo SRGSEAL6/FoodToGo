@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
     <list default="true" id="e27dccd8-f26c-43c6-8de0-8f8ab0e0a6e5" name="Changes" comment="Small update">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodToGo-Front-End/Customer-P2/src/app/component/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FoodToGo-Front-End/Customer-P2/src/app/component/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodToGo-Front-End/Customer-P2/src/app/component/products/products.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FoodToGo-Front-End/Customer-P2/src/app/component/products/products.component.scss" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/InitClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/InitClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +44,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2AzxR1CRrqwg0Jq2lR1QmO509dZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -133,6 +127,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Small update" />

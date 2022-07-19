@@ -3,7 +3,6 @@ package com.example.FoodtoGo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
-import com.example.FoodtoGo.entity.*;
 import javax.persistence.*;
 import java.io.Serializable;
 
