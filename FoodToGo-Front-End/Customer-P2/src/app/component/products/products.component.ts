@@ -10,7 +10,8 @@ import { CartService } from 'src/app/service/cart.service';
 export class ProductsComponent implements OnInit {
 
   public productList : any ;
-  public filterCategory : any
+  public filterCategory : any;
+  public searchTerm : any;
   searchKey:string ="";
   constructor(private api : ApiService, private cartService : CartService) { }
 
@@ -38,10 +39,18 @@ export class ProductsComponent implements OnInit {
   filter(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
-      if(a.category == category || category==''){
+      if(a.category == category || category=='') {
         return a;
       }
     })
   }
-
+  search(term:string){
+    this.searchTerm = term;
+    console.log(this.searchTerm);
+    this.cartService.search.next(this.searchTerm);
+  }
+  reset(){
+    this.cartService.search.next('');
+    this.filter('');
+  }
 }
