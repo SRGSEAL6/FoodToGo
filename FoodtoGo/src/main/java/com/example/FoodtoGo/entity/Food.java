@@ -1,6 +1,7 @@
 package com.example.FoodtoGo.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import com.example.FoodtoGo.entity.*;
 import javax.persistence.*;
@@ -27,10 +28,12 @@ public class Food implements Serializable {
     private String ingredients;
     private String Description;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Order order;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurants_id")
     private Restaurant restaurant;

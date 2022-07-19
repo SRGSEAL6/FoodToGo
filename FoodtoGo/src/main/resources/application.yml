@@ -3,12 +3,12 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/f2go
     username: postgres
-    password: Level123!
+    password: Zumpa2022!
 
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 
 server:
   port: 8181

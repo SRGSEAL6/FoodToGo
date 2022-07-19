@@ -101,10 +101,10 @@ public class ConsumerRestController {
             produces = {
                     "application/json"
             },
-            params = {"user"}
+            params = {"id"}
     )
     public ResponseEntity<?> getResturantByUsername(
-            @RequestParam(name = "user") String username
+            @RequestParam(name = "id") String username
     ){
         //Checks if the username param is not empty
         if (username.isEmpty()) {

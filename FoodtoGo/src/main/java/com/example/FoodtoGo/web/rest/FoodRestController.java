@@ -3,6 +3,7 @@ package com.example.FoodtoGo.web.rest;
 import com.example.FoodtoGo.entity.Consumer;
 import com.example.FoodtoGo.entity.Food;
 import com.example.FoodtoGo.entity.PaymentType;
+import com.example.FoodtoGo.entity.Restaurant;
 import com.example.FoodtoGo.repository.FoodRepository;
 import com.example.FoodtoGo.repository.RestaurantRepository;
 import com.example.FoodtoGo.web.dto.HttpError;
@@ -44,14 +45,14 @@ public class FoodRestController {
             },
             params = {"restaurant"}
     )
-    public ResponseEntity<?> getFoodByRestaurantId(@RequestParam(name = "restaurant") String restaurant){
-        if (restaurant.isEmpty()){
+    public ResponseEntity<?> getFoodByRestaurantId(@RequestParam(name = "restaurant") Integer restaurant){
+        if (restaurant == null){
             HttpError httpError = new HttpError("Restaurant can not be empty");
             return ResponseEntity.badRequest().body(httpError);
         }
         List<Food> foodList = new ArrayList<>();
-        foodList.addAll(foodRepository.findByResturant(Integer.parseInt(restaurant)));
-
+        foodList.addAll(foodRepository.findByResturant(restaurant));
+        System.out.println(foodList);
         return ResponseEntity.ok(foodList);
     }
     @GetMapping(

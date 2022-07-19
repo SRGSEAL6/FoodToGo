@@ -49,10 +49,10 @@ public class RestaurantRestController {
             produces = {
                     "application/json"
             },
-            params = {"user"}
+            params = {"restaurant"}
     )
     public ResponseEntity<?> getRestaurantByUsername(
-            @RequestParam(name = "user") String username){
+            @RequestParam(name = "restaurant") String username){
         if (username.isEmpty()){
             HttpError httpError = new HttpError("Restaurant cannot be empty");
             return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body(httpError);
@@ -65,18 +65,19 @@ public class RestaurantRestController {
         RestuarantDto restuarantDto = new RestuarantDto(restaurant.getId(), restaurant.getRestName(), restaurant.getRestAddress(), restaurant.getUsername(), restaurant.getFoods());
         return ResponseEntity.ok(restuarantDto);
     }
-    @GetMapping(value = "/restaurant",produces = {"application/json"}, params = {"restaurantID"})
-    public List <Food> getRestaurantFoods(@RequestParam("restaurantID")String restaurantID){
 
-    Iterable<Food> RestaurantMenu = foodRepository.findByResturant(Integer.parseInt(restaurantID));
+    @GetMapping(value = "/restaurant",produces = {"application/json"}, params = {"restaurantID"})
+    public List <Food> getRestaurantFoods(@RequestParam("restaurantID") Integer restaurantID){
+
+    Iterable<Food> RestaurantMenu = foodRepository.findByResturant(restaurantID);
         return (List)RestaurantMenu;
 
 
     }
     @GetMapping(value = "/restaurant",produces = {"application/json"}, params = {"orderID"})
-    public List <Order> getRestaurantOrders(@RequestParam("orderID")String orderID) {
+    public List <Order> getRestaurantOrders(@RequestParam("orderID") Integer orderID) {
 
-        Iterable<Order> RestaurantOrders = orderRepository.findByResturant(Integer.parseInt(orderID));
+        Iterable<Order> RestaurantOrders = orderRepository.findByResturant(orderID);
         return (List) RestaurantOrders;
     }
 }
