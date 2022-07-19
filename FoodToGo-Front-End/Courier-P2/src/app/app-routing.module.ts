@@ -8,7 +8,6 @@ import { CourierLoginComponent } from './Courier-Introduction-Page/courier-login
 import { CourierRegistrationComponent } from './Courier-Introduction-Page/courier-registration/courier-registration.component';
 import { CourierAcceptedRequestComponent } from './Courier-Main-Page/courier-accepted-request/courier-accepted-request.component';
 import { CourierMainComponent } from './Courier-Main-Page/courier-main/courier-main.component';
-import { CourierReceivedRequestComponent } from './Courier-Main-Page/courier-received-request/courier-received-request.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CourierIntroductionOpportunitiesComponent } from './courier-introduction-opportunities/courier-introduction-opportunities.component';
@@ -21,51 +20,73 @@ import { AcceptedRequestDropOffComponent } from './Courier-Main-Page/courier-acc
 import { CourierIntroductionNavbarComponent } from './Courier-Introduction-Page/courier-introduction-navbar/courier-introduction-navbar.component';
 import { CourierMainNavbarComponent } from './Courier-Main-Page/courier-main-navbar/courier-main-navbar.component';
 import { RequestOrderComponent } from './Courier-Main-Page/request-order/request-order.component';
+import { CourierReceivedRequestComponent } from './Courier-Main-Page/courier-received-request/courier-received-request.component';
 
 
 const routes: Routes = [
-  // Introduction Page
-  // {
-  //   path: '',
-  //   redirectTo: 'CourierIntroPage',
-  //   pathMatch: 'full'
-  // },
+  //Introduction Page
+  {
+    path: '',
+    redirectTo: '/CourierIntroPage',
+    pathMatch: 'full'
+  },
   {
     path: 'CourierIntroPage',
     component: CourierIntroductionComponent,
     outlet: 'introduction',
     children: [
       {
+        path: '',
+        component: CourierIntroductionNavbarComponent
+      },
+      {
         path: 'courierOpportunities',
         component: CourierIntroductionOpportunitiesComponent,
-        children: [
-          {
-            path: '',
-            component: CourierBenefitsComponent,
-          },
-          {
-            path: '',
-            component: CourierFrequentQuestionsComponent,
-          },
-        ]
       },
-      {
-        path: 'courierSignUp',
-        component: CourierRegistrationComponent,
-        children: [
-          {
-            path: 'courierLogin',
-            component:CourierLoginComponent
-          }
-        ]
-      },
-      {
-        path: 'courierLogin',
-        component: CourierLoginComponent
-      },    
     ]
   },
-  
+  {
+    path: '',
+    component: CourierIntroductionNavbarComponent
+  },
+  {
+    path: 'courierOpportunities',
+    component: CourierIntroductionOpportunitiesComponent,
+    children: [
+      {
+        path: '',
+        component: CourierBenefitsComponent,
+      },
+      {
+        path: '',
+        component: CourierFrequentQuestionsComponent,
+      },
+    ]
+  },
+  {
+    path: 'courierSignUp',
+    component: CourierRegistrationComponent,
+    data:  {
+      courierSignUp: true,
+    },
+    children: [
+      {
+        path: 'courierLogin',
+        component:CourierLoginComponent
+      }
+    ]
+  },
+  {
+    path: 'courierLogin',
+    component: CourierLoginComponent,
+    children: [
+      {
+        path: 'CourierMainPage',
+        component: CourierMainComponent
+      },
+    ]
+  },    
+
   // Main Page
   {
     path: 'CourierMainPage',
@@ -74,7 +95,7 @@ const routes: Routes = [
     children: [
       {
         path: 'courierCurrentRequest',
-        component: CourierReceivedRequestComponent,
+        component:CourierReceivedRequestComponent,
         children: [
           {
             path: 'accept',
@@ -85,33 +106,66 @@ const routes: Routes = [
       {
         path: 'courierAcceptedRequest',
         component: CourierAcceptedRequestComponent,
-        // children: [
-        //   {
-        //     path: '',
-        //     component: AcceptedRequestPickUpComponent
-        //   },
-        //   {
-        //     path: '',
-        //     component: AcceptedRequestOrderComponent,
-        //     children: [
-        //       {
-        //         path: '',
-        //         component: RequestOrderComponent
-        //       }
-        //     ]
-        //   },
-        //   {
-        //     path: '',
-        //     component: AcceptedRequestDropOffComponent
-        //   },
-        // ]
       },
       {
         path: 'courierProfile',
-        component: CourierProfileComponent
+        component: CourierRegistrationComponent
       },
     ]
   },
+  {
+    path: 'courierAcceptedRequest',
+    component: CourierAcceptedRequestComponent,
+    children: [
+      {
+        path: '',
+        component: AcceptedRequestPickUpComponent
+      }, 
+      {
+        path: '',
+        component: AcceptedRequestOrderComponent
+      }, 
+      {
+        path: '',
+        component: AcceptedRequestDropOffComponent
+      }, 
+    ]
+  },
+  {
+    path: '',
+    component: AcceptedRequestPickUpComponent
+  }, 
+  {
+    path: '',
+    component: AcceptedRequestOrderComponent
+  }, 
+  {
+    path: '',
+    component: AcceptedRequestDropOffComponent
+  }, 
+  {
+    path: '',
+    component: RequestOrderComponent
+  },
+  {
+    path: 'courierProfile',
+    component: CourierRegistrationComponent,
+    data: [
+      {
+        courierSignUp: false
+      },
+    ]
+  },
+  {
+    path: 'courierCurrentRequest',
+    component:CourierReceivedRequestComponent,
+    children: [
+      {
+        path: 'accept',
+        component: CourierAcceptedRequestComponent
+      }
+    ]
+  }, 
 ]
 
 @NgModule({
@@ -136,11 +190,10 @@ const routes: Routes = [
         AcceptedRequestOrderComponent,
           RequestOrderComponent,
         AcceptedRequestDropOffComponent,
-      CourierProfileComponent
+      // CourierProfileComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
-    HttpClientModule,
     BrowserModule,
     ReactiveFormsModule
   ],

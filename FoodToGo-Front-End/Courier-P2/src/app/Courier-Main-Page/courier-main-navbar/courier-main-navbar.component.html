@@ -10,30 +10,26 @@
         <div class="collapse navbar-collapse justify-content-end" id="navmenu">
 
             <ul class="navbar-nav ms-auto h4" style="font-size:30;">
-                <!-- link Home button to show courier-received-request ------------->
-                    <li class="nav-item">
-                        <button type="button" class="nav-link px-4 text-light btn btn-lg rounded-pill position-relative">Home</button>
-                    </li>
                 <!-- link  ------------->    
                     <li class="nav-item">
-                        <button type="button" [routerLink]="['courierCurrentRequest']" class="nav-link px-4 text-light btn btn-lg rounded-pill">Current Requests</button>
+                        <button type="button" (click)="btnCurrentRequests()" class="nav-link px-4 text-light btn btn-lg rounded-pill">Current Requests</button>
                     </li>  
                 <!-- link  ------------->    
                     <li class="nav-item">
-                        <button type="button" [routerLink]="['courierAcceptedRequest']" class="nav-link px-4 text-light btn btn-lg rounded-pill">Accepted Requests</button>
+                        <button type="button" (click)="btnAcceptedRequests()" class="nav-link px-4 text-light btn btn-lg rounded-pill">Accepted Requests</button>
                     </li>            
                 <!-- link Profile to show courier-profile ------------->    
                     <li class="nav-item">
-                        <button type="button" [routerLink]="['courierProfile']" class="nav-link px-4 text-light btn btn-lg rounded-pill">Profile</button>
+                        <button type="button" (click)="btnProfile()" class="nav-link px-4 text-light btn btn-lg rounded-pill">Profile</button>
                     </li>
                 <!-- link Logout to courier-introduction ------------->    
                     <li class="nav-item mx-4">
-                        <button type="button" class="nav-link btn btn-dark px-4 rounded-pill text-light">Logout</button>
+                        <button type="button" (click)="btnLogout()" class="nav-link btn btn-dark px-4 rounded-pill text-light">Logout</button>
                     </li>
-                </ul>  
-            
+            </ul>  
         </div> 
     </div>
 </nav>
 
+<router-outlet></router-outlet>
                   

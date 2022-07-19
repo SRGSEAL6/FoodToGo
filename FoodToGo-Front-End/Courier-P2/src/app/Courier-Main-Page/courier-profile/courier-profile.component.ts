@@ -26,7 +26,6 @@ export class CourierProfileComponent implements OnInit {
       .subscribe((forms: any)=>{
         this.forms = forms
       })
-
     }
 
   handleUpdate(
@@ -40,7 +39,7 @@ export class CourierProfileComponent implements OnInit {
     courierPassword: string,
   ){
     this.registrationFormService.updateCourierForm(
-      courierId,courierName,DOB,driversLicenseNum,makeAndModel,licensePlateNum,email,courierPassword
+      courierName,DOB,driversLicenseNum,makeAndModel,licensePlateNum,email,courierPassword
     )
       .subscribe({
         next: () => {

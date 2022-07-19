@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AuthorizeLoginService } from '../courier-login/authorize-login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,6 @@ export class RegistrationFormService {
   }
 
   updateCourierForm(
-    courierId: number, 
     courierName: string,
     DOB: string,
     driversLicenseNum: string,
@@ -32,7 +32,6 @@ export class RegistrationFormService {
     courierPassword: string,
 ) {
     return this.httpClient.patch(this.courierURL, {
-      id: courierId,
       courierName: courierName,
       DOB: DOB,
       driversLicenseNum: driversLicenseNum,
@@ -42,9 +41,5 @@ export class RegistrationFormService {
       courierPassword: courierPassword
     })
   }
-
-
-
-
 
 }

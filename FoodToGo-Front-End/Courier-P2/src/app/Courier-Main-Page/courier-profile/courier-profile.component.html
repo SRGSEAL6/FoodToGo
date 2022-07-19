@@ -4,20 +4,20 @@
 <div *ngFor="let courierProfile of Profile" class="container p-4">
     <div class="card-header text-white rounded" style="background:#ca7b31;">
     <!--- show Courier Name ------------------------>
-        <h1 class="shadow-lg text-center text-dark p-3">Profile : <span class="fw-bold text-white">{{courierProfile.name | uppercase}}</span></h1>
+        <h1 class="shadow-lg text-center text-dark p-3">Profile : <span class="fw-bold text-white">{{courierProfile.name}}</span></h1>
     </div>
-    <form [formGroup]="updateRegistrationForm" (Submit)="handleUpdate()" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
+    <form formGroup="updateRegistrationForm" (Submit)="handleUpdate()" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
         <h3 class="card-title fw-bold pt-3 text-white text-decoration-underline">Personal Information</h3>
         <div class="row">
 <!--- courier-profile-personal-info ------------------------>                  
             <div class="col-6 p-3">
                 <label class="form-label fs-5 fw-semibold">Full Legal Name</label>
-                <input [formControlName]="courierName" class="form-control shadow-lg" placeholder="{{courierProfile.courierName}}"/>
+                <input formControlName="courierName" class="form-control shadow-lg" placeholder="{{courierProfile.courierName}}"/>
             </div>
         <!--- courier--profile-date-of-birth ------------------------>                
             <div class="col-6 p-3">
                 <label class="form-label fs-5 fw-semibold">Date of Birth</label>
-                <input [formControlName]="DOB" class="form-control shadow-lg" placeholder="{{courierProfile.DOB}}"/>
+                <input formControlName="DOB" class="form-control shadow-lg" placeholder="{{courierProfile.DOB}}"/>
             </div>
         </div>
         <hr class="text-white"/>
@@ -26,17 +26,17 @@
 <!--- courier-profile-vehicle-info ------------------------>                
             <div class="col-4 p-3">
                 <label class="form-label fs-5 fw-semibold">Driver's License #</label>
-                <input [formControlName]="driversLicenseNum" class="form-control shadow-lg" placeholder="#{{courierProfile.driversLicenseNum}}"/>
+                <input formControlName="driversLicenseNum" class="form-control shadow-lg" placeholder="#{{courierProfile.driversLicenseNum}}"/>
             </div>
         <!--- courier-profile-vehicle ------------------------>
             <div class="col-4 p-3">
                 <label class="form-label fs-5 fw-semibold">Vehicle Make and Model</label>
-                <input [formControlName]="makeAndModel" class="form-control shadow-lg" placeholder="{{courierProfile.makeAndModel}}"/> 
+                <input formControlName="makeAndModel" class="form-control shadow-lg" placeholder="{{courierProfile.makeAndModel}}"/> 
             </div>
         <!--- courier-profile-vehicle-license ------------------------>
             <div class="col-4 p-3">
                 <label class="form-label fs-5 fw-semibold">License Plate #</label>
-                <input [formControlName]="licensePlateNum" class="form-control shadow-lg" placeholder="#{{courierProfile.licensePlateNum}}"/> 
+                <input formControlName="licensePlateNum" class="form-control shadow-lg" placeholder="#{{courierProfile.licensePlateNum}}"/> 
             </div>
         </div>
         <hr class="text-white"/>
@@ -45,17 +45,17 @@
 <!--- courier-profile-login-info ------------------------>
             <div class="col-6 p-3">
                 <label class="form-label fs-5 fw-semibold">Email</label>
-                <input [formControlName]="email" class="form-control shadow-lg" placeholder="{{courierProfile.email}}"/> 
+                <input formControlName="email" class="form-control shadow-lg" placeholder="{{courierProfile.email}}"/> 
             </div>
         <!--- courier-profile-password ------------------------>
             <div class="col-6 p-3">
                 <label class="form-label fs-5 fw-semibold">Password</label>
-                <input [formControlName]="courierPassword" type="password" class="form-control shadow-lg" placeholder="{{courierProfile.courierPassword}}"/> 
+                <input formControlName="courierPassword" type="password" class="form-control shadow-lg" placeholder="{{courierProfile.courierPassword}}"/> 
             </div>
             <hr class="text-white"/>
     <!--- Configure the button to update courier registration ------------------------>                
             <div class="text-end pb-2 mx-2">
-                <button class="btn btn-dark px-4 rounded-pill" style="font-size:30;">Update</button>
+                <button type="submit" class="btn btn-dark px-4 rounded-pill" style="font-size:30;">Update</button>
             </div>
         </div>      
     </form>

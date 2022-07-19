@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RegistrationFormService } from './registration-form.service';
 
 @Component({
@@ -10,17 +10,24 @@ import { RegistrationFormService } from './registration-form.service';
 })
 export class CourierRegistrationComponent implements OnInit {
 
-  @Output() save = new EventEmitter();
+  courierSignUp = false;
 
   registerCourierForm!: FormGroup
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private registrationFormService: RegistrationFormService
+    private registrationFormService: RegistrationFormService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.route.data
+      .subscribe({
+        next: (data: any) => {
+          this.courierSignUp = data.courierSignUp
+        }
+      })
     this.registerCourierForm = this.fb.group({
       courierName: ['', [Validators.required]],
       DOB: ['', [Validators.required]],
@@ -33,14 +40,16 @@ export class CourierRegistrationComponent implements OnInit {
     })
   }
 
-  handleSubmit(event: Event) {
-    if(this.registerCourierForm.valid){
+  handleSubmit() {
+    if(this.courierSignUp){
       this.registrationFormService.submitNewCourier(this.registerCourierForm.value)
         .subscribe({
           next:()=>{
             this.router.navigate(['courierLogin'])
-          }
+    }
         })
+    }else{
+      this.registerCourierForm.patchValue(this.registerCourierForm)
     }
   }
 }

@@ -1,5 +1,5 @@
 export interface CourierProfile {
-    id: number;
+    Courierid: number;
     courierName: string;
     DOB: string;
     driversLicenseNum: string;
