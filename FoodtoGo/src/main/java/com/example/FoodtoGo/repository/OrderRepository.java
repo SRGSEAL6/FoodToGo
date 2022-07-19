@@ -16,6 +16,9 @@ public interface OrderRepository extends CrudRepository<Order, Integer> {
     List<Order> findByResturant (Integer restaurant_id);
     @Query("select u from Order u where u.courier= ?1")
     List<Order> findByCourier (Integer courier_id);
+
+    @Query("from Order o where o.status = ?1")
+    List<Order> findByStatus (String status);
 /*    Order findByResturants (Restaurant restaurantId);
     Order findByCourier (Courier courierId);*/
 }
