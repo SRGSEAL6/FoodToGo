@@ -23,6 +23,7 @@ import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping(value="/api")
+@CrossOrigin("*")
 public class CourierRestController {
     @Autowired
     private CourierRepository courierRepository;

@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api")
+@CrossOrigin("*")
 public class FoodRestController {
     @Autowired
     FoodRepository foodRepository;

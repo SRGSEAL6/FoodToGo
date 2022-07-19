@@ -1,9 +1,11 @@
 package com.example.FoodtoGo.web.rest;
 
 import com.example.FoodtoGo.entity.Consumer;
+import com.example.FoodtoGo.entity.Food;
 import com.example.FoodtoGo.entity.PaymentType;
 import com.example.FoodtoGo.entity.Restaurant;
 import com.example.FoodtoGo.repository.ConsumerRepository;
+import com.example.FoodtoGo.repository.FoodRepository;
 import com.example.FoodtoGo.repository.RestaurantRepository;
 import com.example.FoodtoGo.web.dto.ConsumerDto;
 import com.example.FoodtoGo.web.dto.HttpError;
@@ -19,12 +21,15 @@ import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping(value = "/api")
+@CrossOrigin("*")
 public class ConsumerRestController {
 
     @Autowired
     private ConsumerRepository consumerRepository;
     @Autowired
     private RestaurantRepository restaurantRepository;
+    @Autowired
+    private FoodRepository foodRepository;
     @PostMapping(
             value = "/registerConsumer",
             consumes = {"application/json"}
@@ -121,7 +126,18 @@ public class ConsumerRestController {
                 restaurant.getRestAddress(), restaurant.getUsername(), restaurant.getFoods());
         return ResponseEntity.ok(restuarantDto);
     }
+    @GetMapping(
+            value = "/getFood",
+            produces = {
+                    "application/json"
+            }
+    )
+    public List<Food> getFood (){
 
+        Iterable<Food> foodList = foodRepository.findAll();
+
+        return (List) foodList;
+    }
 
 }
 

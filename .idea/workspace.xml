@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e27dccd8-f26c-43c6-8de0-8f8ab0e0a6e5" name="Changes" comment="Small update">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/entity/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/InitClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/InitClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodToGo-Front-End/Customer-P2/src/app/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FoodToGo-Front-End/Customer-P2/src/app/service/api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/ConsumerRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/ConsumerRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/CourierRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/CourierRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/FoodRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/FoodRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/OrderRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/OrderRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/RestaurantRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodtoGo/src/main/java/com/example/FoodtoGo/web/rest/RestaurantRestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
