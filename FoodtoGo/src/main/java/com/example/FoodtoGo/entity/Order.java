@@ -23,6 +23,7 @@ public class Order implements Serializable {
     private double totalAmount;
     private String restaurantAddress;
     private String consumerAddress;
+    private DeliveryStatus status;
 
     @OneToMany(fetch = FetchType.LAZY)
 /*    @JoinTable(

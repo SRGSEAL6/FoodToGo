@@ -4,7 +4,9 @@ import com.example.FoodtoGo.entity.Consumer;
 import com.example.FoodtoGo.entity.Courier;
 import com.example.FoodtoGo.entity.Order;
 import com.example.FoodtoGo.entity.PaymentType;
+import com.example.FoodtoGo.repository.ConsumerRepository;
 import com.example.FoodtoGo.repository.CourierRepository;
+import com.example.FoodtoGo.repository.OrderRepository;
 import com.example.FoodtoGo.web.dto.ConsumerDto;
 import com.example.FoodtoGo.web.dto.CourierDto;
 import com.example.FoodtoGo.web.dto.HttpError;
@@ -14,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -23,6 +26,8 @@ import java.util.stream.StreamSupport;
 public class CourierRestController {
     @Autowired
     private CourierRepository courierRepository;
+    private OrderRepository orderRepository;
+    private ConsumerRepository consumerRepository;
     @PostMapping(
             value = "/registerCourier",
             consumes = {"application/json"}
@@ -62,31 +67,39 @@ public class CourierRestController {
         CourierDto courierDto = new CourierDto(courier.getCourierId(), courier.getCourierUsername(),courier.getCourierName(),courier.getHasOrder(),courier.getDateOfBirth(),courier.getLicenseNumber(),courier.getCarMake(),courier.getAccountType());
         return ResponseEntity.ok(courierDto);
     }
-/*    @GetMapping(
+    @GetMapping(
+            value = "{statusOrder}",
+            produces = {
+                    "application/json"
+            }
+
+    )
+    public Iterable<Order> findByStatus(@PathVariable String statusOrder){
+        return orderRepository.findByStatus(statusOrder);
+    }
+/*
+    @PatchMapping (
             value = "/deliverystatus",
             produces = {
                     "application/json"
             }
     )
 
-    public List<OrderDto> getOrder(){
-        Iterable<Order> orders = orderRepository.findAll();
-        return StreamSupport.stream(orders.spliterator(),false)
-                .map(orderDB -> {
-                    OrderDto orderDto = new OrderDto();
-                    orderDto.setId(orderDb.getId());
-                    orderDto.setRestName(restaurantDB.getId());
-                    orderDto.setRestAddress(restaurantDB.getRestName());
-                    orderDto.setConsumerAddress(consumerDB.getConsumerAddress());
-                    orderDto.setConsumerFullName(consumerDB.getConsumerFullName());
-                    orderDto.setOrder(orderDB.getOrder());
-                    return orderDto;
-                })
-                .collect(Collectors.toList());
-    }*/
+    public List<Order> patch(@RequestBody UpdateDeliveryStatus request){
+
+    }
+*/
+
 
 
 
 
 
 }
+
+
+
+
+
+
+
