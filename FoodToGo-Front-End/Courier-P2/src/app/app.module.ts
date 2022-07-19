@@ -12,7 +12,7 @@ import { CourierFooterComponent } from './courier-footer/courier-footer.componen
 @NgModule({
   declarations: [
     AppComponent,
-    CourierFooterComponent,     
+    CourierFooterComponent,
   ],
   imports: [
     BrowserModule,

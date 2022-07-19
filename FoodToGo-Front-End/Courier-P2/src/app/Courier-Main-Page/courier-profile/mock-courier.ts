@@ -1,7 +1,7 @@
 export interface CourierProfile {
     id: number;
     courierName: string;
-    DOB: number;
+    DOB: string;
     driversLicenseNum: string;
     makeAndModel: string;
     licensePlateNum: string;

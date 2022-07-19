@@ -52,6 +52,12 @@ const routes: Routes = [
       {
         path: 'courierSignUp',
         component: CourierRegistrationComponent,
+        children: [
+          {
+            path: 'courierLogin',
+            component:CourierLoginComponent
+          }
+        ]
       },
       {
         path: 'courierLogin',
@@ -71,34 +77,34 @@ const routes: Routes = [
         component: CourierReceivedRequestComponent,
         children: [
           {
-            path: '',
-            component: RequestOrderComponent
+            path: 'accept',
+            component: CourierAcceptedRequestComponent
           }
         ]
       }, 
       {
         path: 'courierAcceptedRequest',
         component: CourierAcceptedRequestComponent,
-        children: [
-          {
-            path: '',
-            component: AcceptedRequestPickUpComponent
-          },
-          {
-            path: '',
-            component: AcceptedRequestOrderComponent,
-            children: [
-              {
-                path: '',
-                component: RequestOrderComponent
-              }
-            ]
-          },
-          {
-            path: '',
-            component: AcceptedRequestDropOffComponent
-          },
-        ]
+        // children: [
+        //   {
+        //     path: '',
+        //     component: AcceptedRequestPickUpComponent
+        //   },
+        //   {
+        //     path: '',
+        //     component: AcceptedRequestOrderComponent,
+        //     children: [
+        //       {
+        //         path: '',
+        //         component: RequestOrderComponent
+        //       }
+        //     ]
+        //   },
+        //   {
+        //     path: '',
+        //     component: AcceptedRequestDropOffComponent
+        //   },
+        // ]
       },
       {
         path: 'courierProfile',

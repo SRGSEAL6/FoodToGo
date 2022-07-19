@@ -1,9 +1,8 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CourierProfile } from './mock-courier';
-import { COURIERS } from './mock-courier-profile';
-import {CourierProfileService} from './courier-profile.service'
+import { AuthorizeLoginService } from 'src/app/Courier-Introduction-Page/courier-login/authorize-login.service';
+import { RegistrationFormService } from 'src/app/Courier-Introduction-Page/courier-registration/registration-form.service';
 
 @Component({
   selector: 'app-courier-profile',
@@ -12,30 +11,50 @@ import {CourierProfileService} from './courier-profile.service'
 })
 export class CourierProfileComponent implements OnInit {
 
-  @Input("value")
-  courier = COURIERS;
-
-  @Output() update = new EventEmitter();
-
-  courierRegistrationUpdate! = FormGroup
+  forms: Array<any> = []
+  
+  updateRegistrationForm!: FormGroup
 
   constructor(
-    private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private registrationFormService: RegistrationFormService,
+    private authService: AuthorizeLoginService,
   ) { }
 
   ngOnInit(): void {
-    this.courierRegistrationUpdate = this.fb.group({
-      courierName: [''],
-      DOB: [ ],
-      driversLicenseNum: [''],
-      makeAndModel: [''],
-      licensePlateNum: [''],
-      email: [''],
-      courierPassword: [''],
-    })
+    this.registrationFormService.getCourierForm()
+      .subscribe((forms: any)=>{
+        this.forms = forms
+      })
+
+    }
+
+  handleUpdate(
+    courierId: number, 
+    courierName: string,
+    DOB: string,
+    driversLicenseNum: string,
+    makeAndModel: string,
+    licensePlateNum: string,
+    email: string,
+    courierPassword: string,
+  ){
+    this.registrationFormService.updateCourierForm(
+      courierId,courierName,DOB,driversLicenseNum,makeAndModel,licensePlateNum,email,courierPassword
+    )
+      .subscribe({
+        next: () => {
+          let regForm = this.forms.find(form => form.id === courierId);
+          regForm.courierName = courierName,
+          regForm.DOB = DOB,
+          regForm.driversLicenseNum = driversLicenseNum,
+          regForm.makeAndModel = makeAndModel,
+          regForm.licensePlateNum = licensePlateNum,
+          regForm.email = email,
+          regForm.courierPassword = courierPassword
+        }
+
+      })
   }
-
-  
-
 }
+

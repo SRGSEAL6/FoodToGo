@@ -4,7 +4,7 @@ export const COURIERS: CourierProfile [] = [
     {   
         id: 1,
         courierName: 'Tom',
-        DOB: 6,
+        DOB: '',
         driversLicenseNum: '#',
         makeAndModel: '',
         licensePlateNum: '#',

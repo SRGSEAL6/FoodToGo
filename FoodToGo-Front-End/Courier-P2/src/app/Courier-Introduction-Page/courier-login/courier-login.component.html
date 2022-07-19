@@ -5,13 +5,13 @@
     <div class="card-header text-white rounded" style="background:#ca7b31;">
         <h1 class="shadow-lg text-center p-3">Welcome Back</h1>
     </div>
-    <form  (submit)="handleSubmit()" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
+    <form [formGroup]="courierLoginForm" (submit)="handleSubmit()" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
         <div class="row justify-content-md-center">
             <div class="col-6 text-white fw-semibold fs-5">
     <!--- Validate the required input ---->                
                 <div class="form-group p-3">
                     <label class="form-label">Email</label>
-                    <input formControlName="courierEmail" type="email" class="form-control p-3 fs-5 shadow-lg">
+                    <input formControlName="courierUsername" type="email" class="form-control p-3 fs-5 shadow-lg">
                 </div>
     <!--- Validate the required input ---->                
                 <div class="form-group p-3">

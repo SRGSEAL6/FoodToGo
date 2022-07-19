@@ -8,6 +8,7 @@ import { from,of } from 'rxjs';
 })
 export class CourierProfileService {
 
+  courierURL: string = 'http://localhost:8181/api/registerCourier';
 
   constructor(
     private httpClient: HttpClient
@@ -17,6 +18,8 @@ export class CourierProfileService {
     
   }
 
-
+  updateCourierProfile(updateCourierForm: any){
+    return this.httpClient.post(this.courierURL, updateCourierForm)
+  }
 
 }

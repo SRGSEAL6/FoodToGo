@@ -21,7 +21,7 @@ export class CourierLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.courierLoginForm = this.fb.group({
-      courierEmail:[''],
+      courierUsername:[''],
       courierPassword:['']
     })
   }
@@ -30,7 +30,7 @@ export class CourierLoginComponent implements OnInit {
     this.auth.doLogin(this.courierLoginForm.value)
       .subscribe({
         next:(response:any)=>{
-          this.router.navigate([''])
+          this.router.navigate(['CourierMainPage'])
         }
       })
   }

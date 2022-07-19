@@ -1,74 +1,56 @@
 <!--- Courier Main Container -> Courier Profile ----->
 
 <!--- Profile of Courier -------------------------->
-<div class="container p-4">
+<div *ngFor="let courierProfile of Profile" class="container p-4">
     <div class="card-header text-white rounded" style="background:#ca7b31;">
     <!--- show Courier Name ------------------------>
-        <h1 class="shadow-lg text-center text-dark p-3">Profile : <span class="fw-bold text-white" *ngFor="let courierProfile for courier">{{courierProfile.name | uppercase}}</span></h1>
+        <h1 class="shadow-lg text-center text-dark p-3">Profile : <span class="fw-bold text-white">{{courierProfile.name | uppercase}}</span></h1>
     </div>
-    <form [formGroup]="courierRegistrationUpdate" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
+    <form [formGroup]="updateRegistrationForm" (Submit)="handleUpdate()" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
         <h3 class="card-title fw-bold pt-3 text-white text-decoration-underline">Personal Information</h3>
         <div class="row">
 <!--- courier-profile-personal-info ------------------------>                  
-            <div *ngFor="let courierProfile of courier" class="col-6 p-3">
-                <label for="name" class="form-label fs-5 fw-semibold">Full Legal Name</label>
-                <div class="input-group">
-                    <input [formControlName]="name" id ="name" class="form-control shadow-lg" placeholder="{{courierProfile.name}}"/>
-                </div>
+            <div class="col-6 p-3">
+                <label class="form-label fs-5 fw-semibold">Full Legal Name</label>
+                <input [formControlName]="courierName" class="form-control shadow-lg" placeholder="{{courierProfile.courierName}}"/>
             </div>
         <!--- courier--profile-date-of-birth ------------------------>                
-            <div *ngFor="let courierProfile of courier" class="col-6 p-3">
-                <label for="birthday" class="form-label fs-5 fw-semibold">Date of Birth</label>
-                <div class="input-group">
-                    <input id="birthday" class="form-control shadow-lg" placeholder="{{courierProfile.birthday}}"/>
-                </div>
+            <div class="col-6 p-3">
+                <label class="form-label fs-5 fw-semibold">Date of Birth</label>
+                <input [formControlName]="DOB" class="form-control shadow-lg" placeholder="{{courierProfile.DOB}}"/>
             </div>
         </div>
         <hr class="text-white"/>
         <h3 class="card-title pt-3 fw-bold text-white text-decoration-underline">Vehicle Information</h3>
         <div class="row">
 <!--- courier-profile-vehicle-info ------------------------>                
-            <div *ngFor="let courierProfile of courier" class="col-4 p-3">
-                <label for="driversLicenseNum" class="form-label fs-5 fw-semibold">Driver's License #</label>
-                <div class="input-group">
-                    <input id="driversLicenseNum" class="form-control shadow-lg" placeholder="#{{courierProfile.driversLicenseNum}}"/>
-                </div>
+            <div class="col-4 p-3">
+                <label class="form-label fs-5 fw-semibold">Driver's License #</label>
+                <input [formControlName]="driversLicenseNum" class="form-control shadow-lg" placeholder="#{{courierProfile.driversLicenseNum}}"/>
             </div>
         <!--- courier-profile-vehicle ------------------------>
-            <div *ngFor="let courierProfile of courier" class="col-4 p-3">
-                <label for="vehicleModel" class="form-label fs-5 fw-semibold">Vehicle Make and Model</label>
-                <div class="input-group">
-            <!--- disable input until icon is clicked and show courier's vehicle make and model in placeholder ------------------------>                        
-                    <input id="vehicleModel" class="form-control shadow-lg" placeholder="{{courierProfile.vehicleModel}}"/> 
-                </div>
+            <div class="col-4 p-3">
+                <label class="form-label fs-5 fw-semibold">Vehicle Make and Model</label>
+                <input [formControlName]="makeAndModel" class="form-control shadow-lg" placeholder="{{courierProfile.makeAndModel}}"/> 
             </div>
         <!--- courier-profile-vehicle-license ------------------------>
-            <div *ngFor="let courierProfile of courier" class="col-4 p-3">
-                <label for="vehicleLicensePlate" class="form-label fs-5 fw-semibold">License Plate #</label>
-                <div class="input-group">
-            <!--- disable input until icon is clicked and show courier's vehicle license in placeholder ------------------------>
-                    <input id="vehicleLicensePlate" class="form-control shadow-lg" placeholder="#{{courierProfile.vehicleLicensePlate}}"/> 
-                </div>
+            <div class="col-4 p-3">
+                <label class="form-label fs-5 fw-semibold">License Plate #</label>
+                <input [formControlName]="licensePlateNum" class="form-control shadow-lg" placeholder="#{{courierProfile.licensePlateNum}}"/> 
             </div>
         </div>
         <hr class="text-white"/>
         <h3 class="card-title fw-bold pt-3 text-white text-decoration-underline">Login Information</h3>
         <div class="row">
 <!--- courier-profile-login-info ------------------------>
-            <div *ngFor="let courierProfile of courier" class="col-6 p-3">
-                <label for="email" class="form-label fs-5 fw-semibold">Email</label>
-                <div class="input-group">
-            <!--- show courier's email in placeholder ------------------------>
-                    <input id="email" class="form-control shadow-lg" placeholder="{{courierProfile.email}}"/> 
-                </div>
+            <div class="col-6 p-3">
+                <label class="form-label fs-5 fw-semibold">Email</label>
+                <input [formControlName]="email" class="form-control shadow-lg" placeholder="{{courierProfile.email}}"/> 
             </div>
         <!--- courier-profile-password ------------------------>
-            <div *ngFor="let courierProfile of courier" class="col-6 p-3">
-                <label for="password" class="form-label fs-5 fw-semibold">Password</label>
-                <div class="input-group">
-            <!--- disable input until icon is clicked and show courier's email in placeholder ------------------------>    
-                    <input id="password" type="password" class="form-control shadow-lg" placeholder="{{courierProfile.password}}"/> 
-                </div>
+            <div class="col-6 p-3">
+                <label class="form-label fs-5 fw-semibold">Password</label>
+                <input [formControlName]="courierPassword" type="password" class="form-control shadow-lg" placeholder="{{courierProfile.courierPassword}}"/> 
             </div>
             <hr class="text-white"/>
     <!--- Configure the button to update courier registration ------------------------>                
