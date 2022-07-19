@@ -1,0 +1,19 @@
+
+<!--- Configure the Order table -------->
+    <table *ngFor="let customerOrder of order" class="table table-dark table-striped">
+        <h1 class="text-light text-center p-3 rounded" style="background:#ca7b31;">Order</h1>
+        <thead class="text-center">
+            <tr>
+                <th>#</th>
+                <th>Item</th>
+                <th>Size</th>
+            </tr>
+        </thead>
+        <tbody class="text-start bg-light text-dark">
+            <tr>
+                <td>{{customerOrder.number}}</td>
+                <td>{{customerOrder.item}}</td>
+                <td>{{customerOrder.size}}</td>
+            </tr>
+        </tbody>
+    </table>

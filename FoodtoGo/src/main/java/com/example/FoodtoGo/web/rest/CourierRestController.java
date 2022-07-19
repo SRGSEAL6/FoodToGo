@@ -59,7 +59,7 @@ public class CourierRestController {
             HttpError httpError = new HttpError("Username cannot be found");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(httpError);
         }
-        CourierDto courierDto = new CourierDto(courier.getCourierId(), courier.getCourierUsername(),courier.getCourierName(),courier.getHasOrder());
+        CourierDto courierDto = new CourierDto(courier.getCourierId(), courier.getCourierUsername(),courier.getCourierName(),courier.getHasOrder(),courier.getDateOfBirth(),courier.getLicenseNumber(),courier.getCarMake(),courier.getAccountType());
         return ResponseEntity.ok(courierDto);
     }
 /*    @GetMapping(

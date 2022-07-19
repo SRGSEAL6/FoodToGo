@@ -20,6 +20,9 @@ public class Courier {
     private String courierPassword;
     private String courierName;
     private Boolean hasOrder;
+    private String dateOfBirth;
+    private int licenseNumber;
+    private String carMake;
     @Enumerated(EnumType.STRING)
     private AccountType accountType;
 

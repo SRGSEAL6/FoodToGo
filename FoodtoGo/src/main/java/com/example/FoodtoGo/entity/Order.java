@@ -21,6 +21,8 @@ public class Order implements Serializable {
     private int id;
     private Timestamp creationTime;
     private double totalAmount;
+    private String restaurantAddress;
+    private String consumerAddress;
 
     @OneToMany(fetch = FetchType.LAZY)
 /*    @JoinTable(
