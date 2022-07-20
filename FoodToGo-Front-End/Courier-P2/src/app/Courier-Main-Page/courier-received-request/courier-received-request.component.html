@@ -6,24 +6,24 @@
     <div *ngIf="" class="row row-cols-1 row-cols-md-2 g-5 p-5">
         <div class="col-6">
           <div class="card shadow-lg text-light" style="background:#ca7b31;border:#ca7b31">
-    <!--- Show the customers name ------>        
+    <!--- Show the customers name ------>
             <div class="card-header" >
                 <h1 id="consumerName" class="card-title">Consumer Name</h1>
             </div>
         <div class="card-body text-start" style="background:#e0b185;">
             <div id="customerOrder">
-    <!--- Show the restaurants name ------>        
+    <!--- Show the restaurants name ------>
                 <h5 class="text-light" id="restaurantName">Restaurant Name</h5>
-    <!--- Show the restaurants name ------>        
+    <!--- Show the restaurants name ------>
                 <p class="text-dark" id="restaurantLocation">Restaurant Location</p>
                 <div class="container p-3 rounded" style="background-color:#f3ba85;">
 
-                    <app-request-order></app-request-order>
+                    <app-request-order [value]="orders" ></app-request-order>
 
                     <hr class="text-white"/>
-    <!--- Notify Customer of Order Accepted by Courier and then send courier to show accepted requests ------>                
-                    <div class="text-end py-2">
-                        <button [routerLink]="['accept']" class="btn btn-success px-4 text-wrap rounded-pill" type="button">
+    <!--- Notify Customer of Order Accepted by Courier and then send courier to show accepted requests ------>
+                    <div class="text-end py-2" >
+                        <button (click)="addToAcceptedRequests(orders)" class="btn btn-success px-4 text-wrap rounded-pill">
                             Accept
                         </button>
                     </div>
