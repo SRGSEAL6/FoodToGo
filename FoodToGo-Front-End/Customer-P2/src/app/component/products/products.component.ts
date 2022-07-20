@@ -39,7 +39,7 @@ export class ProductsComponent implements OnInit {
   filter(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
-      if(a.category == category || category=='') {
+      if(a.foodType == category || category=='') {
         return a;
       }
     })

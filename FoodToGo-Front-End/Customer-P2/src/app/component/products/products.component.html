@@ -66,7 +66,7 @@
 <div class="card-top container-fluid">
     <div class="container d-flex">
         <div class="item">
-            <a (click)="filter('drink')">
+            <a (click)="filter('DRINKS')">
                 <img src="https://png.pngtree.com/png-clipart/20220616/original/pngtree-orange-lemon-juice-drink-for-summer-holiday-sticker-in-beach-illustration-png-image_8081583.png" alt="">
                 <h6>Drinks</h6>
             </a>
@@ -84,7 +84,7 @@
             </a>
         </div>
         <div class="item">
-            <a (click)="filter('burger')">
+            <a (click)="filter('HAMBURGERS')">
                 <img style="width: 62px; margin-top: 5px;" src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-burger-vector-illustration-with-filled-line-design-burger-clip-art-png-image_5225334.jpg" alt="">
                 <h6>Burgers</h6>
             </a>
@@ -96,8 +96,8 @@
     <div class="row">
         <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
             <div class="card col-md-3">
-                <img src="{{item.image}}" alt="">
-                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <img [src]="item.imgPath" alt="" >
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.foodName}}</h5>
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
                 <p><strong>Price:</strong> ${{item.price}}</p>
                 <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
