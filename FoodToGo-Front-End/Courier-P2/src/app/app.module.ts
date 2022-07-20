@@ -4,13 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,65 +22,63 @@ import { CourierReceivedRequestComponent } from './Courier-Main-Page/courier-rec
 
 const routes: Routes = [
   //Introduction Page
-  // {
-  //   path: '',
-  //   redirectTo: 'CourierIntroPage',
-  //   pathMatch: 'full'
-  // },
-  // {
-  //   path: 'CourierIntroPage',
-  //   component: CourierIntroductionComponent,
-  //   children: [
+  {
+    path: '',
+    component: CourierIntroductionNavbarComponent,
+    outlet: "navbar"
+  },
   {
     path: 'CourierIntroPage',
-    component: CourierIntroductionNavbarComponent
-  },
-  {
-    path: 'courierOpportunities',
-    component: CourierIntroductionOpportunitiesComponent,
-  },
-  {
-    path: 'courierOpportunities',
-    component: CourierIntroductionOpportunitiesComponent,
+    component: CourierIntroductionNavbarComponent,
+    outlet: "navbar",
     children: [
       {
-        path: '',
-        component: CourierBenefitsComponent,
+        path: 'courierOpportunities',
+        component: CourierIntroductionOpportunitiesComponent,
+        children: [
+          {
+            path: '',
+            component: CourierBenefitsComponent,
+          },
+          {
+            path: '',
+            component: CourierFrequentQuestionsComponent,
+          },
+        ]
       },
       {
-        path: '',
-        component: CourierFrequentQuestionsComponent,
+        path: 'courierSignUp',
+        component: CourierRegistrationComponent,
+        data:  {
+          courierSignUp: true,
+        },
+        children: [
+          {
+            path: 'courierLogin',
+            component:CourierLoginComponent
+          }
+        ]
       },
-    ]
-  },
-  {
-    path: 'courierSignUp',
-    component: CourierRegistrationComponent,
-    data:  {
-      courierSignUp: true,
-    },
-    children: [
       {
         path: 'courierLogin',
-        component:CourierLoginComponent
-      }
-    ]
-  },
-  {
-    path: 'courierLogin',
-    component: CourierLoginComponent,
-    children: [
-      {
-        path: 'CourierMainPage',
-        component: CourierMainNavbarComponent
+        component: CourierLoginComponent,
+        children: [
+          {
+            path: 'CourierMainPage',
+            component: CourierMainNavbarComponent,
+            outlet: "navbar"
+          },
+        ]
       },
     ]
-  },    
+  },
+    
 
   // Main Page
   {
     path: 'CourierMainPage',
     component: CourierMainNavbarComponent,
+    outlet: "navbar",
     children: [
       {
         path: 'courierCurrentRequest',
@@ -98,50 +96,12 @@ const routes: Routes = [
       },
       {
         path: 'courierProfile',
-        component: CourierRegistrationComponent
-      },
-    ]
-  },
-  {
-    path: 'courierAcceptedRequest',
-    component: CourierAcceptedRequestComponent,
-    children: [
-      {
-        path: '',
-        component: AcceptedRequestPickUpComponent
-      }, 
-      {
-        path: '',
-        component: AcceptedRequestOrderComponent
-      }, 
-      {
-        path: '',
-        component: AcceptedRequestDropOffComponent
-      }, 
-    ]
-  },
-  {
-    path: '',
-    component: AcceptedRequestPickUpComponent
-  }, 
-  {
-    path: '',
-    component: AcceptedRequestOrderComponent
-  }, 
-  {
-    path: '',
-    component: AcceptedRequestDropOffComponent
-  }, 
-  {
-    path: '',
-    component: RequestOrderComponent
-  },
-  {
-    path: 'courierProfile',
-    component: CourierRegistrationComponent,
-    data: [
-      {
-        courierSignUp: false
+        component: CourierRegistrationComponent,
+        data: [
+          {
+            courierSignUp: false
+          },
+        ]
       },
     ]
   },
@@ -168,6 +128,7 @@ const routes: Routes = [
           RequestOrderComponent,
         AcceptedRequestDropOffComponent,
       // CourierProfileComponent
+      
   ],
   imports: [
     RouterModule.forRoot(routes),
