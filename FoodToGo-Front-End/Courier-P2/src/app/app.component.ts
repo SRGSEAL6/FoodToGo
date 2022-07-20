@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { tap } from 'rxjs/operators';
 import { AuthorizeLoginService } from './Courier-Introduction-Page/courier-login/authorize-login.service';
 
 @Component({
@@ -10,22 +12,27 @@ import { AuthorizeLoginService } from './Courier-Introduction-Page/courier-login
 export class AppComponent {
   title = 'Courier-P2';
 
-  isUserLoggedIn = false
+  isLoggedIn = false;
+  courierDetails: any = {};
 
   constructor(
-    private router: Router,
-    private auth: AuthorizeLoginService
+    private auth: AuthorizeLoginService,
   ) { }
 
   ngOnInit(): void {
-    this.isUserLoggedIn=this.auth.isLoggedIn()
-    console.log(this.isUserLoggedIn)
     this.auth.authStream.subscribe({
-      next:(au:any)=>{
-        this.isUserLoggedIn=au.isLoggedIn
-      }
-    })
-  }
-
+      next: (data: any) => {
+        if (data.isLoggedIn){
+          this.isLoggedIn = data.isLoggedIn
+          this.auth.getCourier()
+            .subscribe({
+              next: (courier: any) => {
+                this.courierDetails = courier;
+              }
+            })
+          }
+        }
+      })
+    }
 
 }

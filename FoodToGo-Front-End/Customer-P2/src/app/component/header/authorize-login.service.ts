@@ -8,6 +8,7 @@ import { BehaviorSubject, tap } from 'rxjs';
 export class AuthorizeLoginService {
 
   authStream=new BehaviorSubject<any>({isUserLoggedIn:false})
+  courierDetails: any = {}
 
   constructor(
     private httpClient: HttpClient

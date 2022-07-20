@@ -15,19 +15,17 @@
                     </li>
                 <!--- Link to courier introduction page ----->                    
                     <li class="nav-item">
-                        <button type="button" [routerLink]="['courierOpportunities']"  class="nav-link px-4 text-light btn btn-lg rounded-pill position-relative">Opportunities</button>
+                        <button type="button" (click)="btnCourierOpportunities()" class="nav-link px-4 text-light btn btn-lg rounded-pill position-relative">Opportunities</button>
                     </li>
                 <!--- Link to customer sign up page ----->
                     <li class="nav-item">
-                        <button type="button" [routerLink]="['courierSignUp']" class="nav-link btn btn-light px-4 rounded-pill text-dark">Sign Up</button>
+                        <button type="button" (click)="btnSignUp()" class="nav-link btn btn-light px-4 rounded-pill text-dark">Sign Up</button>
                     </li>
                 <!--- Link to overall login page ----->
                     <li class="nav-item mx-4">
-                        <button type="button" [routerLink]="['courierLogin']" class="nav-link btn btn-dark px-4 rounded-pill text-light">Login</button>
+                        <button type="button" (click)="btnLogin()" class="nav-link btn btn-dark px-4 rounded-pill text-light">Login</button>
                     </li>
             </ul>             
         </div> 
     </div>
 </nav>
-
-<router-outlet></router-outlet>                  

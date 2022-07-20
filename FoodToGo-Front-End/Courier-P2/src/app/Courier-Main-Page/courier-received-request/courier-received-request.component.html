@@ -3,7 +3,7 @@
 <!--- Display of Current Requests by Consumers ------->
 <div class="card shadow-lg text-center p-4 m-5">
     <div class="card-header text-white display-5 fw-bold" style="background:#ca7b31;">Current Delivery Requests</div>
-    <div class="row row-cols-1 row-cols-md-2 g-5 p-5">
+    <div *ngIf="" class="row row-cols-1 row-cols-md-2 g-5 p-5">
         <div class="col-6">
           <div class="card shadow-lg text-light" style="background:#ca7b31;border:#ca7b31">
     <!--- Show the customers name ------>        
@@ -23,16 +23,13 @@
                     <hr class="text-white"/>
     <!--- Notify Customer of Order Accepted by Courier and then send courier to show accepted requests ------>                
                     <div class="text-end py-2">
-                        <button class="btn btn-success px-4 text-wrap rounded-pill" type="submit">
+                        <button [routerLink]="['accept']" class="btn btn-success px-4 text-wrap rounded-pill" type="button">
                             Accept
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-    <!--- Show when the order was placed by customer --------->    
-        <div class="card-footer">
-            <small id="consumerSubmittedOrder" class="text-light">Last updated 3 mins ago</small>
-        </div>
+        <div class="card-footer"></div>
     </div>
 </div>

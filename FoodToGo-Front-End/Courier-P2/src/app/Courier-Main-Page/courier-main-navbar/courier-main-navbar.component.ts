@@ -16,4 +16,22 @@ export class CourierMainNavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  btnCurrentRequests =  () => {
+    this.router.navigate(['courierCurrentRequest']);
+  };
+
+  btnAcceptedRequests =  () => {
+    this.router.navigate(['courierAcceptedRequest']);
+  };
+
+  btnProfile =  () => {
+    this.router.navigate(['courierSignUp']);
+  };
+
+  btnLogout =  () => {
+    this.router.navigate(['CourierIntroPage']);
+  };
+
+
+
 }

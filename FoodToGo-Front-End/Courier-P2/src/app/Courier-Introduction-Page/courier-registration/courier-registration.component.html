@@ -6,7 +6,7 @@
         <h1 class="shadow-lg text-center p-3">Sign up to become a EatHub Courier</h1>
     </div>
 
-    <form [formGroup]="" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
+    <form [formGroup]="registerCourierForm" (Submit)="handleSubmit()" class="shadow-lg p-3 mb-2 rounded" style="background:#e0b185;">
 
 <!--- Personal Information Section --------------------------------------------------------------------->
         <h3 class="card-title fw-bold pt-3 text-decoration-underline">Personal Information</h3>
@@ -14,12 +14,12 @@
         <!--- Validate Input is required ---->
             <div class="form-group col p-3">
                 <label class="form-label fs-5 fw-semibold">Full Legal Name</label>
-                <input fromControlName="" class="form-control shadow-lg">
+                <input fromControlName="courierName" class="form-control shadow-lg">
             </div>
         <!--- Validate age is over 18 yrs and input is required ---->
             <div class="form-group col p-3">
                 <label class="form-label fs-5 fw-semibold">Date of Birth</label>
-                <input fromControlName="" class="form-control shadow-lg">
+                <input fromControlName="DOB" class="form-control shadow-lg">
             </div>
         </div>
         
@@ -29,17 +29,17 @@
         <!--- Validate Input is required ---->
             <div class="form-group col p-3">
                 <label class="form-label fs-5 fw-semibold">Driver's License #</label>
-                <input fromControlName="" class="form-control shadow-lg">
+                <input fromControlName="driversLicenseNum" class="form-control shadow-lg">
             </div>
         <!--- Validate Input is required ---->
             <div class="form-group col p-3">
                 <label class="form-label fs-5 fw-semibold">Vehicle Make and Model</label>
-                <input fromControlName="" class="form-control shadow-lg">
+                <input fromControlName="makeAndModel" class="form-control shadow-lg">
             </div>
         <!--- Validate Input is required ---->
             <div class="form-group col p-3">
                 <label class="form-label fs-5 fw-semibold">License Plate #</label>
-                <input fromControlName="" class="form-control shadow-lg">
+                <input fromControlName="licensePlateNum" class="form-control shadow-lg">
             </div>
         </div>
 
@@ -49,24 +49,24 @@
         <!--- Validate Input is required ---->
             <div class="form-group col p-3">
                 <label class="form-label fs-5 fw-semibold">Email</label>
-                <input fromControlName="" type="email" class="form-control shadow-lg">
+                <input fromControlName="email" type="email" class="form-control shadow-lg">
             </div>
         <!--- Validate Input is required ---->
             <div class="form-group col p-3">
                 <label class="form-label fs-5 fw-semibold">Password</label>
-                <input fromControlName="" type="password" class="form-control shadow-lg">
+                <input fromControlName="courierPassword" type="password" class="form-control shadow-lg">
             </div>
         </div>
         <hr />
         <!--- Configure checkbox to be validated/required ---->        
-        <div class="row">
+        <!-- <div class="row">
             <div class="form-group col mt-3 text-start">
                 <input fromControlName="" class="form-check-input" type="checkbox">
                 <label class="form-check-label text-danger" style="font-size:20px">
                     * <span class="text-white">I consent to a background check before I can start my career with EatHub.</span>
                 </label>
                 </div>
-        </div>
+        </div> -->
 
     <!--- Configure the button to submit the registration form and bring courier back to introduction page --->
         <div class="text-end p-2">

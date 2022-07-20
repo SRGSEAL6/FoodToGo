@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-courier-introduction-navbar',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourierIntroductionNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
+
+  btnCourierOpportunities =  () => {
+    this.router.navigate(['courierOpportunities']);
+  };
+
+  btnSignUp =  () => {
+    this.router.navigate(['courierSignUp']);
+  };
+
+  btnLogin =  () => {
+    this.router.navigate(['courierLogin']);
+  };
 
 }
