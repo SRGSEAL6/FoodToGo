@@ -60,7 +60,7 @@ public class InitClass {
         List<Food> mcdFood = new ArrayList<>();
         Restaurant restaurant = new Restaurant(2, "McD's", "123 addy", "mcd", "123", RestaurantType.AMERICAN, AccountType.RESTAURANT, mcdFood,null);
         restaurantRepository.save(restaurant);
-        Food food = new Food(3, FoodType.BEEF, "Filet", SizeType.LARGE, 25.00, "Steak, Broccoli, Mash Patatos", "Medium Rare steak cooked to perfection.",null, restaurant);
+        Food food = new Food();
         foodRepository.save(food);
         mcdFood.add(food);
     }

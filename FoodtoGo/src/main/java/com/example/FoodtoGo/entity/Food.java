@@ -26,6 +26,7 @@ public class Food implements Serializable {
     private double price;
     private String ingredients;
     private String Description;
+    private String imgPath;
 
     @JsonIgnore
     @ManyToOne
