@@ -14,23 +14,17 @@ export class AuthorizeLoginService {
     private httpClient: HttpClient
   ) {
   }
-
-  getToken() {
-    return localStorage.getCourier("auth-token") || null;
-  }
+  
 
   doLogin(credentials: object) {
     return this.httpClient.post("http://localhost:8181/login", credentials)
       .pipe(tap((response: any) => {
-          const jwtToken = response.jwt;
-          localStorage.setCourier("auth-token", jwtToken)
           this.authStream.next({isLoggedIn: true})
         }
       ))
   }
 
   doLogout() {
-    localStorage.removeCourier("auth-token")
     this.authStream.next({isLoggedIn: false})
   }
 

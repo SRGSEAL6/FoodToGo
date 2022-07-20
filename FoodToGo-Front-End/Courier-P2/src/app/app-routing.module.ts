@@ -3,17 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 
-import { CourierIntroductionComponent } from './Courier-Introduction-Page/courier-introduction/courier-introduction.component';
 import { CourierLoginComponent } from './Courier-Introduction-Page/courier-login/courier-login.component';
 import { CourierRegistrationComponent } from './Courier-Introduction-Page/courier-registration/courier-registration.component';
 import { CourierAcceptedRequestComponent } from './Courier-Main-Page/courier-accepted-request/courier-accepted-request.component';
-import { CourierMainComponent } from './Courier-Main-Page/courier-main/courier-main.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CourierIntroductionOpportunitiesComponent } from './courier-introduction-opportunities/courier-introduction-opportunities.component';
-import { CourierProfileComponent } from './Courier-Main-Page/courier-profile/courier-profile.component';
-import { CourierBenefitsComponent } from './courier-introduction-opportunities/courier-benefits/courier-benefits.component';
-import { CourierFrequentQuestionsComponent } from './courier-introduction-opportunities/courier-frequent-questions/courier-frequent-questions.component';
+import { CourierIntroductionOpportunitiesComponent } from './Courier-Introduction-Page/courier-introduction-opportunities/courier-introduction-opportunities.component';
+import { CourierBenefitsComponent } from './Courier-Introduction-Page/courier-introduction-opportunities/courier-benefits/courier-benefits.component';
+import { CourierFrequentQuestionsComponent } from './Courier-Introduction-Page/courier-introduction-opportunities/courier-frequent-questions/courier-frequent-questions.component';
 import { AcceptedRequestPickUpComponent } from './Courier-Main-Page/courier-accepted-request/accepted-request-pick-up/accepted-request-pick-up.component';
 import { AcceptedRequestOrderComponent } from './Courier-Main-Page/courier-accepted-request/accepted-request-order/accepted-request-order.component';
 import { AcceptedRequestDropOffComponent } from './Courier-Main-Page/courier-accepted-request/accepted-request-drop-off/accepted-request-drop-off.component';
@@ -25,29 +22,22 @@ import { CourierReceivedRequestComponent } from './Courier-Main-Page/courier-rec
 
 const routes: Routes = [
   //Introduction Page
-  {
-    path: '',
-    redirectTo: '/CourierIntroPage',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'CourierIntroPage',
+  //   pathMatch: 'full'
+  // },
+  // {
+  //   path: 'CourierIntroPage',
+  //   component: CourierIntroductionComponent,
+  //   children: [
   {
     path: 'CourierIntroPage',
-    component: CourierIntroductionComponent,
-    outlet: 'introduction',
-    children: [
-      {
-        path: '',
-        component: CourierIntroductionNavbarComponent
-      },
-      {
-        path: 'courierOpportunities',
-        component: CourierIntroductionOpportunitiesComponent,
-      },
-    ]
+    component: CourierIntroductionNavbarComponent
   },
   {
-    path: '',
-    component: CourierIntroductionNavbarComponent
+    path: 'courierOpportunities',
+    component: CourierIntroductionOpportunitiesComponent,
   },
   {
     path: 'courierOpportunities',
@@ -82,7 +72,7 @@ const routes: Routes = [
     children: [
       {
         path: 'CourierMainPage',
-        component: CourierMainComponent
+        component: CourierMainNavbarComponent
       },
     ]
   },    
@@ -90,8 +80,7 @@ const routes: Routes = [
   // Main Page
   {
     path: 'CourierMainPage',
-    component: CourierMainComponent,
-    outlet: 'main',
+    component: CourierMainNavbarComponent,
     children: [
       {
         path: 'courierCurrentRequest',
@@ -156,22 +145,11 @@ const routes: Routes = [
       },
     ]
   },
-  {
-    path: 'courierCurrentRequest',
-    component:CourierReceivedRequestComponent,
-    children: [
-      {
-        path: 'accept',
-        component: CourierAcceptedRequestComponent
-      }
-    ]
-  }, 
 ]
 
 @NgModule({
   declarations: [
   // Introduction Page
-  CourierIntroductionComponent,
     CourierIntroductionNavbarComponent,
     // Navbar Link Components
       CourierIntroductionOpportunitiesComponent,
@@ -181,7 +159,6 @@ const routes: Routes = [
       CourierRegistrationComponent,
 
   // Main Page
-  CourierMainComponent,
     CourierMainNavbarComponent,
       // Navbar Link Components
       CourierReceivedRequestComponent,
