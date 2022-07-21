@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { tap } from 'rxjs/operators';
-import { AuthorizeLoginService } from './Courier-Introduction-Page/courier-login/authorize-login.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-root',
@@ -12,27 +12,46 @@ import { AuthorizeLoginService } from './Courier-Introduction-Page/courier-login
 export class AppComponent {
   title = 'Courier-P2';
 
-  isLoggedIn = false;
-  courierDetails: any = {};
+  // isLoggedIn = false;
+  // courierDetails: any = {};
 
   constructor(
-    private auth: AuthorizeLoginService,
+    // private auth: AuthorizeLoginService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.auth.authStream.subscribe({
-      next: (data: any) => {
-        if (data.isLoggedIn){
-          this.isLoggedIn = data.isLoggedIn
-          this.auth.getCourier()
-            .subscribe({
-              next: (courier: any) => {
-                this.courierDetails = courier;
-              }
-            })
-          }
-        }
-      })
+    // this.auth.authStream.subscribe({
+    //   next: (data: any) => {
+    //     if (data.isLoggedIn){
+    //       this.isLoggedIn = data.isLoggedIn
+    //       this.auth.getCourier()
+    //         .subscribe({
+    //           next: (courier: any) => {
+    //             this.courierDetails = courier;
+    //           }
+    //         })
+    //       }
+    //     }
+    //   })
     }
+
+
+    btnCurrentRequests =  () => {
+      this.router.navigate(['courierCurrentRequest']);
+    };
+  
+    btnAcceptedRequests =  () => {
+      this.router.navigate(['courierAcceptedRequest']);
+    };
+  
+    btnProfile =  () => {
+      this.router.navigate(['courierProfile']);
+    };
+  
+    // btnLogout =  () => {
+    //   this.router.navigate(['CourierIntroPage']);
+    // };
+
 
 }

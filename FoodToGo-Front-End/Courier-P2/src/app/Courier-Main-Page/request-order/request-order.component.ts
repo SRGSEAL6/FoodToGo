@@ -11,15 +11,20 @@ import { RequestOrderService } from './request-order.service';
   styleUrls: ['./request-order.component.css']
 })
 export class RequestOrderComponent implements OnInit {
-  @Input("value")
 
-  order = ORDER;
+  orders: Array<any> = []
 
   constructor(
-    private router: Router
+    private router: Router,
+    private requestOrderService: RequestOrderService
   ) { }
 
   ngOnInit(): void {
+    this.requestOrderService.getAllOrders()
+      .subscribe((orders: any) => {
+        this.orders = orders;
+        })
   }
+
 
 }
